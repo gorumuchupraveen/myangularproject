@@ -12,17 +12,11 @@ export class HomeComponent implements OnInit {
 
   myCity:any;
   clicked = true;
-<<<<<<< HEAD
   open = true;
   gender: any;
-  constructor() {
-=======
+  constructor(private router: Router) {
   
-  constructor(
-    private router: Router
-  ) {
->>>>>>> 541dc1457bc89e580e1f1f48cc12411c5ab40caa
-    
+
    }
 
   ngOnInit() {
@@ -34,7 +28,6 @@ export class HomeComponent implements OnInit {
     this.clicked = !this.clicked;
     console.log(this.clicked);
   }
-<<<<<<< HEAD
   gtype(type){
     this.gender = type;
     console.log( this.gender, 'Gender')
@@ -43,9 +36,7 @@ export class HomeComponent implements OnInit {
     this.open = !this.open;
   }
 
-=======
   onClick(){
     this.router.navigate(['send']);
   }
->>>>>>> 541dc1457bc89e580e1f1f48cc12411c5ab40caa
 }
