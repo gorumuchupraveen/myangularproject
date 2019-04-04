@@ -4,3 +4,21 @@
 
 <button type="button" (click) = "clickFunc()">Active Button</button>
 <p [ngClass]="{'class1': clicked, 'class2': !clicked}">Color Changing Text</p>
+<button type="button" (click)="changeFun()">clikit</button>
+<h1 [ngClass]="{'p2': open, 'p1': !open }">Color Changing Text</h1>
+<form action="">
+<label for="male">
+    <input type="radio"id="male" name="gender" (click)="gtype('male')">
+    Male
+</label>
+<label for="Female">
+    <input type="radio"id="Female" name="gender" (click)="gtype('female')"> Female
+</label>
+<label for="other">
+    <input type="radio"id="other" name="gender" (click)="gtype('other')"> Trans
+</label>
+</form>
+
+<h1 *ngIf="gender === 'male'"> male txt</h1>
+<h1 *ngIf="gender === 'female'"> female txt</h1>
+<h1 *ngIf="gender === 'other'"> txt</h1>
