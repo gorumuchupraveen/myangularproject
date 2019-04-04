@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import cities from '../../../assets/json/cities.json';
+
 
 @Component({
   selector: 'app-home',
@@ -7,19 +10,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  myCity:any;
   clicked = true;
+<<<<<<< HEAD
   open = true;
   gender: any;
   constructor() {
+=======
+  
+  constructor(
+    private router: Router
+  ) {
+>>>>>>> 541dc1457bc89e580e1f1f48cc12411c5ab40caa
     
    }
 
   ngOnInit() {
+    this.myCity=cities;
   }
+
+
   clickFunc(){
     this.clicked = !this.clicked;
     console.log(this.clicked);
   }
+<<<<<<< HEAD
   gtype(type){
     this.gender = type;
     console.log( this.gender, 'Gender')
@@ -28,4 +43,9 @@ export class HomeComponent implements OnInit {
     this.open = !this.open;
   }
 
+=======
+  onClick(){
+    this.router.navigate(['send']);
+  }
+>>>>>>> 541dc1457bc89e580e1f1f48cc12411c5ab40caa
 }

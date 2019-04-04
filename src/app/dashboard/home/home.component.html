@@ -22,3 +22,7 @@
 <h1 *ngIf="gender === 'male'"> male txt</h1>
 <h1 *ngIf="gender === 'female'"> female txt</h1>
 <h1 *ngIf="gender === 'other'"> txt</h1>
+<button class="btn btn-primary" (click)="onClick()"> Navigation </button>
+<ul>
+    <li *ngFor="let city of myCity.city">{{city}}</li>
+</ul>
