@@ -4,3 +4,7 @@
 
 <button type="button" (click) = "clickFunc()">Active Button</button>
 <p [ngClass]="{'class1': clicked, 'class2': !clicked}">Color Changing Text</p>
+<button class="btn btn-primary" (click)="onClick()"> Navigation </button>
+<ul>
+    <li *ngFor="let city of myCity.city">{{city}}</li>
+</ul>
