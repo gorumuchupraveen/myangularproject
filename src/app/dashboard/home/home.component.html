@@ -1,22 +1,21 @@
 <p>
- HOME COMPONENT WORKS
+    HOME COMPONENT WORKS
 </p>
-
-<button type="button" (click) = "clickFunc()">Active Button</button>
+<button type="button" (click)="clickFunc()">Active Button</button>
 <p [ngClass]="{'class1': clicked, 'class2': !clicked}">Color Changing Text</p>
 <button type="button" (click)="changeFun()">clikit</button>
 <h1 [ngClass]="{'p2': open, 'p1': !open }">Color Changing Text</h1>
 <form action="">
-<label for="male">
-    <input type="radio"id="male" name="gender" (click)="gtype('male')">
-    Male
-</label>
-<label for="Female">
-    <input type="radio"id="Female" name="gender" (click)="gtype('female')"> Female
-</label>
-<label for="other">
-    <input type="radio"id="other" name="gender" (click)="gtype('other')"> Trans
-</label>
+    <label for="male">
+        <input type="radio" id="male" name="gender" (click)="gtype('male')">
+        Male
+    </label>
+    <label for="Female">
+        <input type="radio" id="Female" name="gender" (click)="gtype('female')"> Female
+    </label>
+    <label for="other">
+        <input type="radio" id="other" name="gender" (click)="gtype('other')"> Trans
+    </label>
 </form>
 
 <h1 *ngIf="gender === 'male'"> male txt</h1>
@@ -25,5 +24,85 @@
 <button class="btn btn-primary" (click)="onClick()"> Navigation </button>
 <ul>
     <li *ngFor="let city of myCity.city">{{city}}</li>
-    
+
 </ul>
+<table class="table table-striped table-inverse table-responsive" style="width:1200px;margin:auto">
+    <thead class="thead-inverse">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Location</th>
+            <th>Qualification</th>
+            <th>Course</th>
+            <th>Marks</th>
+            <th>Percentage</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{users.Name}}</td>
+            <td>{{users.Age}}</td>
+            <td>
+                <ol class="list-unstyled" *ngFor="let location of users.Locations">
+                    <li>{{location}}</li>
+                </ol>
+            </td>
+            <td>{{users.Qualification}}</td>
+            <td>
+                <ol class="list-unstyled" *ngFor="let course of users.Courses">
+                    <li>{{course}}</li>
+                </ol>
+            </td>
+            <td>
+                <p>Tenth :{{users.Marks.Tenth}}</p>
+                <p>Tenth :{{users.Marks.Intermediate}}</p>
+                <p>Tenth :{{users.Marks.Btech}}</p>
+            </td>
+            <td>
+                <p>Tenth :{{users.persons.Tenth}}</p>
+                <p>Intermediate :{{users.persons.Intermediate}}</p>
+                <p>Btech :{{users.persons.Btech}}</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="table table-light mt-5" style="width:1200px;margin:auto">
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>ID</th>
+            <th>Type</th>
+            <th>Name</th>
+            <th>PPU</th>
+            <th>Batters</th>
+            <th>Topping</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let sno of solo;  let i = index">
+            <td>{{(i+1)}}</td> 
+            <td>{{sno.id}}</td>
+            <td>{{sno.type}}</td>
+            <td>{{sno.name}}</td>
+            <td>{{sno.ppu}}</td>
+            <td>
+                <ul class="list-unstyled" >
+                    <li *ngFor="let virat of sno.batters.batter">
+                   ID :   {{virat.id}}
+                    Type :  {{virat.type}}
+                    </li>
+                </ul>
+            </td>
+            <td>
+                <ul class="list-unstyled">
+                    <li *ngFor="let koli of sno.topping">
+                        Id: {{koli.id}}
+                        Type : {{koli.type}}
+                    </li>
+                </ul>
+            </td>
+        </tr>
+
+    </tbody>
+</table>

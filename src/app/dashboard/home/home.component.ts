@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import cities from '../../../assets/json/cities.json';
+import data from "../../../assets/json/data.json";
+import sol from "../../../assets/json/sol.json";
 
 
 @Component({
@@ -9,8 +11,9 @@ import cities from '../../../assets/json/cities.json';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  users:any;
   myCity:any;
+  solo:any;
   clicked = true;
   open = true;
   gender: any;
@@ -21,6 +24,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.myCity=cities;
+    this.users=data;
+    this.solo=sol;
   }
 
 

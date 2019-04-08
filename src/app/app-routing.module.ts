@@ -8,7 +8,9 @@ import {PromoteModule} from './promote/promote.module';
 const routes: Routes = [
   {path :'business', loadChildren: './business/business.module#BusinessModule'},
   {path: 'promote', loadChildren: './promote/promote.module#PromoteModule' },
- { path: 'dashboard',loadChildren: './dashboard/dashboard.module#DashboardModule' }
+ {path: 'dashboard',loadChildren: './dashboard/dashboard.module#DashboardModule' }
+
+
 //  { path : 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule'}
 ];
 
