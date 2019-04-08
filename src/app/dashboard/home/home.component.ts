@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
   clicked = true;
   open = true;
   gender: any;
+  raina :any;
   constructor(private router: Router) {
   
 
@@ -43,5 +44,9 @@ export class HomeComponent implements OnInit {
 
   onClick(){
     this.router.navigate(['send']);
+  }
+  onClickcolor(jadeja){
+    console.log('Click is working');
+    this.raina=jadeja;
   }
 }
