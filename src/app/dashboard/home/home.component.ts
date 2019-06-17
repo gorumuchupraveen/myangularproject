@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import cities from '../../../assets/json/cities.json';
 import data from "../../../assets/json/data.json";
 import sol from "../../../assets/json/sol.json";
+import country from "../../../assets/json/country.json";
 
 
 
@@ -20,6 +21,8 @@ export class HomeComponent implements OnInit {
   gender: any;
   raina :any;
   koli:any;
+  countries : any;
+  
 
   constructor(private router: Router) {
   
@@ -30,6 +33,7 @@ export class HomeComponent implements OnInit {
     this.myCity=cities;
     this.users=data;
     this.solo=sol;
+    this.countries=country;
   }
 
 
