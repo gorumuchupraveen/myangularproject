@@ -5,10 +5,11 @@ import data from "../../../assets/json/data.json";
 import sol from "../../../assets/json/sol.json";
 
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
   users:any;
@@ -18,6 +19,8 @@ export class HomeComponent implements OnInit {
   open = true;
   gender: any;
   raina :any;
+  koli:any;
+
   constructor(private router: Router) {
   
 
@@ -48,5 +51,6 @@ export class HomeComponent implements OnInit {
   onClickcolor(jadeja){
     console.log('Click is working');
     this.raina=jadeja;
+    this.koli=jadeja;
   }
 }
